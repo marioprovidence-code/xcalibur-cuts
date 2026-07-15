@@ -76,4 +76,35 @@
       enroll.reset();
     });
   }
+
+  // Gallery lightbox
+  const lb = document.getElementById("lightbox");
+  const lbContent = document.getElementById("lbContent");
+  const lbClose = document.getElementById("lbClose");
+  if (lb && lbContent) {
+    document.querySelectorAll(".gallery__grid .tile img, .gallery__grid .tile video").forEach(function (el) {
+      el.style.cursor = "zoom-in";
+      el.addEventListener("click", function () {
+        const clone = el.cloneNode(true);
+        if (clone.tagName === "VIDEO") {
+          clone.setAttribute("controls", "");
+          clone.removeAttribute("muted");
+          clone.autoplay = true;
+          clone.loop = true;
+        }
+        lbContent.innerHTML = "";
+        lbContent.appendChild(clone);
+        lb.classList.add("open");
+        lb.setAttribute("aria-hidden", "false");
+      });
+    });
+    function closeLb() {
+      lb.classList.remove("open");
+      lb.setAttribute("aria-hidden", "true");
+      lbContent.innerHTML = "";
+    }
+    if (lbClose) lbClose.addEventListener("click", closeLb);
+    lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
+  }
 })();
