@@ -1,0 +1,253 @@
+:root {
+  --bg: #0e0e10;
+  --bg-2: #16161a;
+  --gold: #c9a14a;
+  --gold-light: #e6c574;
+  --text: #f2f0ea;
+  --muted: #a3a09a;
+  --line: rgba(201, 161, 74, 0.25);
+  --max: 1160px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3 { font-family: "Cinzel", serif; font-weight: 700; line-height: 1.15; }
+
+a { color: inherit; text-decoration: none; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 2px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.btn--gold { background: var(--gold); color: #1a1407; }
+.btn--gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn--ghost { background: transparent; color: var(--text); border-color: var(--gold); }
+.btn--ghost:hover { background: rgba(201, 161, 74, 0.12); }
+.btn--full { width: 100%; }
+
+/* Navbar */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(14, 14, 16, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.nav.scrolled { background: rgba(14, 14, 16, 0.95); border-color: var(--line); }
+.nav__inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand__logo { height: 46px; width: 46px; border-radius: 0; border: 1px solid var(--gold); object-fit: cover; padding: 2px; background: var(--bg); box-shadow: 0 0 0 1px rgba(0,0,0,0.5); }
+.brand__name { font-family: "Cinzel", serif; font-weight: 900; font-size: 1.25rem; letter-spacing: 1px; }
+.brand__name span { color: var(--gold); }
+.nav__links { display: flex; gap: 28px; }
+.nav__links a { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); transition: color 0.2s; }
+.nav__links a:hover { color: var(--gold); }
+.nav__cta { padding: 10px 20px; }
+.nav__toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 70% 30%, rgba(201,161,74,0.18), transparent 45%),
+    linear-gradient(135deg, #0e0e10 0%, #1d1b16 60%, #0e0e10 100%);
+  overflow: hidden;
+}
+.hero__video {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; z-index: 0;
+}
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(45deg, rgba(201,161,74,0.04) 0 2px, transparent 2px 22px);
+  pointer-events: none; z-index: 1;
+}
+.hero__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(14,14,16,0.82) 0%, rgba(14,14,16,0.55) 50%, rgba(14,14,16,0.85) 100%); z-index: 1; }
+.hero__content { position: relative; z-index: 2; text-align: center; margin: 0 auto; }
+.hero__eyebrow { color: var(--gold); letter-spacing: 4px; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 18px; }
+.hero__title { font-size: clamp(2.6rem, 8vw, 5.5rem); font-weight: 900; text-transform: uppercase; }
+.hero__title span { color: var(--gold); }
+.hero__slogan {
+  font-family: "Cinzel", serif; font-weight: 700; font-style: italic;
+  color: var(--gold-light); letter-spacing: 2px; text-transform: uppercase;
+  font-size: clamp(1rem, 2.5vw, 1.4rem); margin: 18px auto 0;
+}
+.hero__sub { color: var(--muted); margin: 22px auto 36px; max-width: 560px; font-size: 1.05rem; }
+.hero__actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* Booking */
+.booking { background: var(--bg-2); padding: 90px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.booking__inner { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: center; }
+.booking__text h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.booking__text p { color: var(--muted); margin-top: 14px; max-width: 420px; }
+.booking__form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; background: var(--bg); padding: 28px; border: 1px solid var(--line); }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field:nth-child(3), .field:nth-child(4) { /* keep grid */ }
+.field label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); }
+.field input, .field select {
+  background: #0c0c0e; border: 1px solid #2a2a2e; color: var(--text);
+  padding: 12px 14px; border-radius: 2px; font-family: inherit; font-size: 0.95rem;
+}
+.field input:focus, .field select:focus { outline: none; border-color: var(--gold); }
+.booking__form button { grid-column: 1 / -1; }
+.booking__note { grid-column: 1 / -1; color: var(--gold-light); font-size: 0.9rem; text-align: center; min-height: 1.2em; }
+
+/* Section shared */
+.section { padding: 100px 0; }
+.section__head { text-align: center; margin-bottom: 54px; }
+.section__eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 12px; }
+.section__title { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+
+/* Services */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card {
+  background: var(--bg-2); border: 1px solid var(--line); padding: 34px 28px;
+  border-radius: 4px; transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover { transform: translateY(-6px); border-color: var(--gold); box-shadow: 0 14px 40px rgba(0,0,0,0.5); }
+.card__icon { font-size: 2.4rem; margin-bottom: 16px; }
+.card h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 18px; }
+.card__price { color: var(--gold); font-weight: 600; letter-spacing: 0.5px; }
+
+/* About */
+.about { background: var(--bg-2); }
+.about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.about__media {
+  position: relative; min-height: 380px; border: 1px solid var(--line); border-radius: 4px;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(201,161,74,0.25), transparent 55%),
+    linear-gradient(160deg, #1a1a1f, #0e0e10);
+  display: flex; align-items: center; justify-content: center;
+}
+.about__badge {
+  font-family: "Cinzel", serif; font-size: 1.4rem; letter-spacing: 2px; color: var(--gold);
+  border: 1px solid var(--gold); padding: 16px 28px; transform: rotate(-4deg);
+}
+.about__text p { color: var(--muted); margin: 16px 0 24px; }
+.about__list { list-style: none; display: grid; gap: 10px; }
+.about__list li { color: var(--text); font-size: 0.98rem; }
+
+/* Gallery */
+.gallery__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.tile {
+  position: relative; margin: 0; min-height: 240px; border-radius: 4px;
+  border: 1px solid var(--line); overflow: hidden; background: var(--bg-2);
+}
+.tile img, .tile video {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.4s ease;
+}
+.tile__num {
+  position: absolute; top: 10px; left: 10px; z-index: 2;
+  background: var(--gold); color: #1a1407; font-weight: 700;
+  width: 30px; height: 30px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; font-family: "Montserrat", sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.tile:hover img, .tile:hover video { transform: scale(1.06); }
+.tile video { object-fit: contain; background: #000; }
+
+/* Team */
+.team { background: var(--bg-2); }
+.team__grid { display: grid; grid-template-columns: repeat(2, 220px); gap: 24px; justify-content: center; }
+.member { text-align: center; }
+.member__avatar {
+  width: 120px; height: 120px; margin: 0 auto 18px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Cinzel", serif; font-size: 1.8rem; font-weight: 700; color: var(--gold);
+  background: radial-gradient(circle, rgba(201,161,74,0.18), transparent 70%);
+  border: 2px solid var(--gold);
+}
+.member h3 { font-size: 1.2rem; }
+.member p { color: var(--muted); font-size: 0.9rem; }
+
+/* Courses */
+.courses { background: var(--bg-2); }
+.courses__sub { font-family: "Cinzel", serif; font-size: 1.4rem; color: var(--gold); margin: 40px 0 20px; }
+.courses__sub:first-of-type { margin-top: 0; }
+.courses__videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.course-video { margin: 0; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: #000; }
+.course-video video { width: 100%; display: block; aspect-ratio: 1 / 1; object-fit: cover; background: #000; }
+.course-video figcaption { padding: 12px 14px; font-size: 0.9rem; color: var(--text); background: var(--bg); }
+
+.enroll { margin-top: 48px; background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 30px; }
+.enroll__title { font-family: "Cinzel", serif; font-size: 1.4rem; color: var(--gold); margin-bottom: 20px; }
+.enroll__fields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 18px; }
+.enroll__note { color: var(--gold-light); font-size: 0.9rem; margin-top: 14px; min-height: 1.2em; }
+
+/* Contact */
+.contact__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.contact__list { list-style: none; margin-top: 22px; display: grid; gap: 16px; }
+.contact__list li { color: var(--muted); font-size: 1rem; }
+.contact__list strong { color: var(--gold); display: block; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; font-family: "Montserrat"; }
+.contact__map-link { display: inline-block; margin-top: 4px; color: var(--gold); border: 1px solid var(--gold); padding: 10px 16px; font-size: 0.82rem; letter-spacing: 1px; text-transform: uppercase; transition: background 0.2s, color 0.2s; }
+.contact__map-link:hover { background: var(--gold); color: #1a1407; }
+.contact__map iframe { width: 100%; height: 320px; border: 0; filter: grayscale(1) invert(0.9); }
+
+.booking__actions { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-self: center; }
+.booking__actions .btn { text-align: center; }
+
+/* Floating WhatsApp */
+.wa-float {
+  position: fixed; right: 22px; bottom: 22px; z-index: 120;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #25d366; color: #fff; font-size: 1.6rem;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
+}
+.wa-float:hover { transform: scale(1.08); }
+.footer { background: #0a0a0c; border-top: 1px solid var(--line); padding: 40px 0; }
+.footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.footer p { color: var(--muted); font-size: 0.85rem; }
+.footer__social { display: flex; gap: 14px; }
+.footer__social a {
+  width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: var(--gold);
+  transition: background 0.2s, color 0.2s;
+}
+.footer__social a:hover { background: var(--gold); color: #1a1407; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav__links { display: none; position: absolute; top: 72px; right: 0; flex-direction: column; background: var(--bg); width: 220px; padding: 20px; border: 1px solid var(--line); }
+  .nav__links.open { display: flex; }
+  .nav__toggle { display: block; }
+  .nav__cta { display: none; }
+  .booking__inner, .about__grid, .contact__grid { grid-template-columns: 1fr; }
+  .cards, .gallery__grid, .courses__videos, .enroll__fields { grid-template-columns: repeat(2, 1fr); }
+  .team__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .booking__form { grid-template-columns: 1fr; }
+  .cards, .gallery__grid, .team__grid, .courses__videos, .enroll__fields { grid-template-columns: 1fr; }
+}

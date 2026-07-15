@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xcalibur Cuts Barber Salon — Premium Grooming</title>
+  <meta name="description" content="Xcalibur Cuts Barber Salon — precision haircuts, fades, beard sculpting and classic grooming. Book your chair today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="brand">
+        <img src="logo-trace.svg" alt="Xcalibur Cuts Barber Salon" class="brand__logo" />
+        <span class="brand__name">Xcalibur<span>Cuts</span></span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#team">Barbers</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#book" class="btn btn--gold nav__cta">Book Now</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <video class="hero__video" autoplay muted loop playsinline poster="">
+      <source src="hero-bg.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="hero__eyebrow">Precision. Style. Legacy.</p>
+      <h1 class="hero__title">Xcalibur Cuts<br /><span>Barber Salon</span></h1>
+      <p class="hero__slogan">Where Quality Meets Precision</p>
+      <p class="hero__sub">Sharp lines, masterful fades, and royal treatment for the modern gentleman.</p>
+      <div class="hero__actions">
+        <a href="#book" class="btn btn--gold">Book an Appointment</a>
+        <a href="#services" class="btn btn--ghost">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section class="booking" id="book">
+    <div class="container booking__inner">
+      <div class="booking__text">
+        <h2>Reserve Your Throne</h2>
+        <p>Walk-ins are welcome, but kings book ahead. Book online in seconds or message us on WhatsApp to claim your chair.</p>
+      </div>
+      <div class="booking__actions">
+        <a href="https://xcaliburcutsbarbersalon.setmore.com/" target="_blank" rel="noopener" class="btn btn--gold btn--full">Book on Setmore</a>
+        <a href="https://wa.me/18683513344" target="_blank" rel="noopener" class="btn btn--ghost btn--full">Book via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">Our Craft</p>
+        <h2 class="section__title">Services Fit for Royalty</h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card__icon">🪒</div>
+          <h3>Skin Fade</h3>
+          <p>Crisp, blended fades tailored to your head shape and style.</p>
+          <span class="card__price">$80.00 – $100.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">✂️</div>
+          <h3>Classic Cut</h3>
+          <p>Timeless scissor cuts with a complimentary line-up.</p>
+          <span class="card__price">$80.00 – $100.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">🧔</div>
+          <h3>Beard Sculpt</h3>
+          <p>Shape, trim and detail your beard to sharp perfection.</p>
+          <span class="card__price">$80.00 – $100.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">🔥</div>
+          <h3>Hot Towel Shave</h3>
+          <p>Old-school straight-razor shave with warm towels.</p>
+          <span class="card__price">$80.00 – $100.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">👑</div>
+          <h3>Royal Package</h3>
+          <p>Cut, beard sculpt, hot towel shave and a cold drink.</p>
+          <span class="card__price">$80.00 – $100.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">🧒</div>
+          <h3>Kids Cut</h3>
+          <p>Gentle, patient cuts for the young knights in training (under 12).</p>
+          <span class="card__price">$60.00 &amp; $80.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">🪞</div>
+          <h3>Side Cut &amp; Shave</h3>
+          <p>Clean side cut paired with a smooth, refreshing shave.</p>
+          <span class="card__price">$80.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">✂️</div>
+          <h3>Side Cut</h3>
+          <p>Precise side cut for a sharp, defined look.</p>
+          <span class="card__price">$60.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">💇</div>
+          <h3>Women's Haircut</h3>
+          <p>Styled cuts tailored to women, from trims to transformations.</p>
+          <span class="card__price">$80.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">🎨</div>
+          <h3>Haircut with Design</h3>
+          <p>Cut plus custom etched designs and creative detailing.</p>
+          <span class="card__price">$100.00 – $300.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">🪒</div>
+          <h3>Lineup &amp; Shave</h3>
+          <p>Crisp edge-up followed by a clean, close shave.</p>
+          <span class="card__price">$60.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">🪒</div>
+          <h3>Shave</h3>
+          <p>Straight-razor shave with hot towels and aftercare.</p>
+          <span class="card__price">$50.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">📏</div>
+          <h3>Lineup</h3>
+          <p>Sharp edge-up to refresh your hairline and shape.</p>
+          <span class="card__price">$50.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">🔥</div>
+          <h3>Taper Fades &amp; Enhanced Lineup</h3>
+          <p>Graduated taper fade with a detailed, enhanced edge-up.</p>
+          <span class="card__price">$80.00</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">👁️</div>
+          <h3>Eyebrow Shaping</h3>
+          <p>Clean brow grooming for women ($30) and men ($20).</p>
+          <span class="card__price">$20.00 &amp; $30.00</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container about__grid">
+      <div class="about__media">
+        <div class="about__badge">Est. 2014</div>
+      </div>
+      <div class="about__text">
+        <p class="section__eyebrow">The Legend</p>
+        <h2 class="section__title">Forged by Masters, Worn by Kings</h2>
+        <p>At Xcalibur Cuts Barber Salon we believe a great cut is weapon-grade confidence. Our barbers train for years to master the blade so every client leaves looking legendary.</p>
+        <ul class="about__list">
+          <li>✓ Master-certified barbers</li>
+          <li>✓ Sterilized, premium tools</li>
+          <li>✓ Relaxed lounge &amp; cold brews</li>
+          <li>✓ 1,000+ five-star cuts delivered</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">The Armory</p>
+        <h2 class="section__title">Fresh Cuts Gallery</h2>
+      </div>
+      <div class="gallery__grid">
+        <figure class="tile"><span class="tile__num">1</span><img src="gallery/20220321_165742.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">2</span><img src="gallery/20231022_192947.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">4</span><img src="gallery/20240615_180830.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">5</span><img src="gallery/20250324_105230.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">6</span><img src="gallery/20250403_130508.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">10</span><img src="gallery/20250627_164953.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">11</span><img src="gallery/20250711_123535.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">12</span><img src="gallery/20250724_125032.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">13</span><img src="gallery/20250727_123429.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">16</span><img src="gallery/photo_2026-07-14_19-46-38.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">17</span><img src="gallery/photo_2026-07-14_19-46-46.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">18</span><img src="gallery/photo_2026-07-14_19-46-49.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">19</span><img src="gallery/photo_2026-07-14_19-46-55.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">20</span><img src="gallery/photo_2026-07-14_19-46-58.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">21</span><img src="gallery/photo_2026-07-14_19-47-00.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">22</span><img src="gallery/photo_2026-07-14_19-47-03.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">23</span><img src="gallery/photo_2026-07-14_19-47-05.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">24</span><img src="gallery/photo_2026-07-14_19-47-08.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">25</span><img src="gallery/photo_2026-07-14_19-47-11.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">26</span><img src="gallery/photo_2026-07-14_19-47-14.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">27</span><img src="gallery/photo_2026-07-14_19-47-18.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">28</span><img src="gallery/photo_2026-07-14_19-47-21.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">29</span><img src="gallery/photo_2026-07-14_19-47-25.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">30</span><img src="gallery/photo_2026-07-14_19-47-31.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">31</span><img src="gallery/photo_2026-07-14_19-47-35.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">32</span><img src="gallery/photo_2026-07-14_19-47-41.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">33</span><img src="gallery/photo_2026-07-14_19-47-45.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">34</span><img src="gallery/photo_2026-07-14_19-47-48.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">36</span><img src="gallery/photo_2026-07-14_19-47-57.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">37</span><img src="gallery/photo_2026-07-14_19-48-00.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">38</span><img src="gallery/photo_2026-07-14_19-48-03.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">39</span><img src="gallery/photo_2026-07-14_19-48-08.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">40</span><img src="gallery/photo_2026-07-14_19-48-11.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">41</span><img src="gallery/photo_2026-07-14_19-48-14.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">42</span><img src="gallery/photo_2026-07-14_19-48-18.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">43</span><img src="gallery/photo_2026-07-14_19-48-20.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">44</span><img src="gallery/photo_2026-07-14_19-48-23.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">45</span><img src="gallery/photo_2026-07-14_19-48-26.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">46</span><img src="gallery/photo_2026-07-14_19-48-29.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">47</span><img src="gallery/photo_2026-07-14_19-48-36.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">48</span><img src="gallery/photo_2026-07-14_19-48-39.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">49</span><img src="gallery/photo_2026-07-14_19-48-45.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">50</span><img src="gallery/photo_2026-07-14_19-48-48.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">51</span><img src="gallery/photo_2026-07-14_19-48-56.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">53</span><img src="gallery/photo_2026-07-14_19-49-18.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">54</span><img src="gallery/photo_2026-07-14_19-49-29.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">56</span><img src="gallery/photo_2026-07-14_19-49-46.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+        <figure class="tile"><span class="tile__num">57</span><img src="gallery/photo_2026-07-14_19-49-50.jpg" alt="Xcalibur Cuts haircut" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="team section" id="team">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">The Round Table</p>
+        <h2 class="section__title">Meet the Barbers</h2>
+      </div>
+      <div class="team__grid">
+        <article class="member">
+          <div class="member__avatar">M</div>
+          <h3>Mario</h3>
+          <p>Aka Majestik Skills · Master Barber</p>
+        </article>
+        <article class="member">
+          <div class="member__avatar">J</div>
+          <h3>Joshua</h3>
+          <p>Aka Semper · Barber</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tutorials & Courses -->
+  <section class="courses section" id="courses">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">Learn the Craft</p>
+        <h2 class="section__title">Tutorials &amp; Courses</h2>
+      </div>
+
+      <h3 class="courses__sub">Tutorial Clips</h3>
+      <div class="courses__videos">
+        <figure class="course-video">
+          <video src="gallery/20231213_155447.mp4" controls preload="metadata" muted></video>
+          <figcaption>The Perfect Skin Fade</figcaption>
+        </figure>
+        <figure class="course-video">
+          <video src="gallery/20250404_134626_840.mp4" controls preload="metadata" muted></video>
+          <figcaption>Line-up &amp; Edge Work</figcaption>
+        </figure>
+        <figure class="course-video">
+          <video src="gallery/20250404_142852_280.mp4" controls preload="metadata" muted></video>
+          <figcaption>Beard Sculpting Masterclass</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="courses__sub">Training Programs</h3>
+      <div class="cards">
+        <article class="card">
+          <div class="card__icon">🪒</div>
+          <h3>Beginner Barber Bootcamp</h3>
+          <p>4-week foundation: tools, hygiene, basic cuts and your first fade.</p>
+          <span class="card__price">$2000 · 4 Weeks</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">✂️</div>
+          <h3>Fade Masterclass</h3>
+          <p>Advanced blending, hairlines and texture from Master Barber Mario.</p>
+          <span class="card__price">$1700 · 3 Weeks</span>
+        </article>
+        <article class="card">
+          <div class="card__icon">🧔</div>
+          <h3>Beard Artistry</h3>
+          <p>Shaping, detailing and hot-towel finishing for the modern beard.</p>
+          <span class="card__price">$1200 · 1 Week</span>
+        </article>
+      </div>
+
+      <form class="enroll" id="enrollForm">
+        <h3 class="enroll__title">Enroll in a Course</h3>
+        <div class="enroll__fields">
+          <div class="field">
+            <label for="eName">Name</label>
+            <input type="text" id="eName" name="eName" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="ePhone">Phone</label>
+            <input type="tel" id="ePhone" name="ePhone" placeholder="(868) 000-0000" required />
+          </div>
+          <div class="field">
+            <label for="eCourse">Course</label>
+            <select id="eCourse" name="eCourse" required>
+              <option value="">Choose a course</option>
+              <option>Beginner Barber Bootcamp</option>
+              <option>Fade Masterclass</option>
+              <option>Beard Artistry</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--gold">Request Enrollment</button>
+        <p class="enroll__note" id="enrollNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section" id="contact">
+    <div class="container contact__grid">
+      <div class="contact__info">
+        <p class="section__eyebrow">Visit the Castle</p>
+        <h2 class="section__title">Find Us</h2>
+        <ul class="contact__list">
+          <li><strong>📍 Address</strong> 18 Bonne Aventure Rd, Gasparillo</li>
+          <li><strong>📞 Phone</strong> (868) 351-3344</li>
+          <li><strong>💬 WhatsApp</strong> <a href="https://wa.me/18683513344" target="_blank" rel="noopener">(868) 351-3344</a></li>
+          <li><strong>✉️ Email</strong> hello@xcaliburcuts.com</li>
+          <li><strong>🕒 Hours</strong> Opens 9:00 am daily</li>
+          <li><a href="https://share.google/8hoD2gb1OW0doFOzH" target="_blank" rel="noopener" class="contact__map-link">🗺 View on Google Maps</a></li>
+        </ul>
+      </div>
+      <div class="contact__map">
+        <iframe title="Location map" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-61.4448%2C10.3063%2C-61.4248%2C10.3263&layer=mapnik&marker=10.3163%2C-61.4348"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#home" class="brand brand--footer">
+        <img src="logo-trace.svg" alt="Xcalibur Cuts Barber Salon" class="brand__logo" />
+        <span class="brand__name">Xcalibur<span>Cuts</span></span>
+      </a>
+      <p>© <span id="year"></span> Xcalibur Cuts Barber Salon. All rights reserved.</p>
+      <div class="footer__social">
+        <a href="https://www.tiktok.com/@xcaliburcuts?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+        <a href="https://wa.me/18683513344" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/18683513344" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">💬</a>
+  <script src="script.js"></script>
+</body>
+</html>

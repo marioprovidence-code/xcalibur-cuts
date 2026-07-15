@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Xcalibur Cuts wireframe logo">
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.4" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="scanGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6c574" stop-opacity="0" />
+      <stop offset="50%" stop-color="#e6c574" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#e6c574" stop-opacity="0" />
+    </linearGradient>
+    <style>
+      :root { --gold: #c9a14a; --goldL: #e6c574; }
+      .ln {
+        fill: none; stroke: var(--gold); stroke-width: 2.2;
+        stroke-linecap: round; stroke-linejoin: round;
+        filter: url(#glow);
+        stroke-dasharray: 1; stroke-dashoffset: 1;
+        animation: draw 2.6s ease forwards;
+      }
+      .d1 { animation-delay: .15s; }
+      .d2 { animation-delay: .55s; }
+      .d3 { animation-delay: .95s; }
+      .d4 { animation-delay: 1.35s; }
+      .node {
+        fill: var(--goldL); filter: url(#glow);
+        opacity: 0; transform-box: fill-box; transform-origin: center;
+        animation: pop .5s ease forwards, pulse 2.4s 2s ease-in-out infinite;
+      }
+      .nd1 { animation-delay: 1.8s, 2s; }
+      .nd2 { animation-delay: 1.9s, 2.2s; }
+      .nd3 { animation-delay: 2.0s, 2.4s; }
+      .scan {
+        fill: url(#scanGrad);
+        animation: scan 3.4s 2.6s linear infinite;
+        opacity: .0;
+      }
+      @keyframes draw { to { stroke-dashoffset: 0; } }
+      @keyframes pop  { to { opacity: 1; } }
+      @keyframes pulse { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
+      @keyframes scan {
+        0%   { transform: translateY(18px);  opacity: 0; }
+        10%  { opacity: .8; }
+        90%  { opacity: .8; }
+        100% { transform: translateY(214px); opacity: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .ln { stroke-dashoffset: 0; animation: none; }
+        .node { opacity: 1; animation: none; }
+        .scan { display: none; }
+      }
+    </style>
+  </defs>
+
+  <!-- Outer + inner hexagon frames -->
+  <path class="ln d1" pathLength="1" d="M120 20 L186.6 60 L186.6 180 L120 220 L53.4 180 L53.4 60 Z" />
+  <path class="ln d2" pathLength="1" d="M120 50 L180.6 80.7 L180.6 159.3 L120 190 L59.4 159.3 L59.4 80.7 Z" />
+
+  <!-- Circuit / wireframe mesh -->
+  <g class="ln d3" pathLength="1">
+    <path d="M120 50 L120 190" />
+    <path d="M53.4 60 L120 120 L186.6 60" />
+    <path d="M53.4 180 L120 120 L186.6 180" />
+    <path d="M70 110 L170 110" />
+  </g>
+
+  <!-- Stylized face / helm detailing -->
+  <g class="ln d4" pathLength="1">
+    <path d="M95 110 l11 -9 l11 9 l-11 9 z" />
+    <path d="M145 110 l-11 -9 l-11 9 l11 9 z" />
+    <path d="M82 152 L158 152" />
+    <path d="M95 152 l0 12 M120 152 l0 14 M145 152 l0 12" />
+  </g>
+
+  <!-- Glowing nodes -->
+  <circle class="node nd1" cx="120" cy="120" r="4.5" />
+  <circle class="node nd2" cx="95" cy="110" r="3.4" />
+  <circle class="node nd2" cx="145" cy="110" r="3.4" />
+  <circle class="node nd3" cx="120" cy="190" r="3.4" />
+  <circle class="node nd3" cx="120" cy="50" r="3.4" />
+
+  <!-- Scan line -->
+  <rect class="scan" x="40" y="0" width="160" height="3" rx="1.5" />
+</svg>
