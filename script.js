@@ -77,6 +77,31 @@
     });
   }
 
+  // Share button (native share sheet, copy-link fallback)
+  const shareBtn = document.getElementById("shareBtn");
+  const shareNote = document.getElementById("shareNote");
+  if (shareBtn) {
+    shareBtn.addEventListener("click", async function () {
+      const data = {
+        title: "Xcalibur Cuts Barber Salon",
+        text: "Check out Xcalibur Cuts Barber Salon!",
+        url: "https://marioprovidence-code.github.io/xcalibur-cuts/"
+      };
+      if (navigator.share) {
+        try {
+          await navigator.share(data);
+        } catch (e) { /* user cancelled */ }
+      } else if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.writeText(data.url);
+          if (shareNote) shareNote.textContent = "Link copied to clipboard!";
+        } catch (e) {
+          if (shareNote) shareNote.textContent = "Could not copy link.";
+        }
+      }
+    });
+  }
+
   // Gallery lightbox
   const lb = document.getElementById("lightbox");
   const lbContent = document.getElementById("lbContent");
