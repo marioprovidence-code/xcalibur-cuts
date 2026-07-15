@@ -46,8 +46,9 @@
       form.reset();
     });
   }
-  // Enroll form -> posts to endpoint (Google Apps Script) which emails the owner
-  const ENROLL_ENDPOINT = ""; // paste your Google Apps Script web app URL here
+  // Enroll form -> posts to Web3Forms (free) which emails the owner
+  const ENROLL_ENDPOINT = "https://api.web3forms.com/submit";
+  const WEB3_KEY = ""; // paste your free Web3Forms access key here
   const enroll = document.getElementById("enrollForm");
   const enrollNote = document.getElementById("enrollNote");
   if (enroll) {
@@ -60,8 +61,13 @@
         enrollNote.textContent = "Please complete all fields to enroll.";
         return;
       }
-      const payload = new URLSearchParams({ name: name, phone: phone, course: course });
-      if (ENROLL_ENDPOINT) {
+      const payload = new URLSearchParams({
+        access_key: WEB3_KEY,
+        subject: "New Course Enrollment - Xcalibur Cuts",
+        from_name: "Xcalibur Cuts Website",
+        name: name, phone: phone, course: course
+      });
+      if (ENROLL_ENDPOINT && WEB3_KEY) {
         fetch(ENROLL_ENDPOINT, { method: "POST", body: payload }).catch(function () {});
       }
       enrollNote.textContent =
