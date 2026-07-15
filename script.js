@@ -56,8 +56,9 @@
       e.preventDefault();
       const name = enroll.querySelector("#eName").value.trim();
       const phone = enroll.querySelector("#ePhone").value.trim();
+      const email = enroll.querySelector("#eEmail").value.trim();
       const course = enroll.querySelector("#eCourse").value;
-      if (!name || !course) {
+      if (!name || !email || !course) {
         enrollNote.textContent = "Please complete all fields to enroll.";
         return;
       }
@@ -65,7 +66,7 @@
         access_key: WEB3_KEY,
         subject: "New Course Enrollment - Xcalibur Cuts",
         from_name: "Xcalibur Cuts Website",
-        name: name, phone: phone, course: course
+        name: name, phone: phone, email: email, course: course
       });
       if (ENROLL_ENDPOINT && WEB3_KEY) {
         fetch(ENROLL_ENDPOINT, { method: "POST", body: payload }).catch(function () {});
