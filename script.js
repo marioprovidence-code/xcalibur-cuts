@@ -48,7 +48,7 @@
   }
   // Enroll form -> posts to Web3Forms (free) which emails the owner
   const ENROLL_ENDPOINT = "https://api.web3forms.com/submit";
-  const WEB3_KEY = ""; // paste your free Web3Forms access key here
+  const WEB3_KEY = "548158"; // free Web3Forms access key
   const enroll = document.getElementById("enrollForm");
   const enrollNote = document.getElementById("enrollNote");
   if (enroll) {
