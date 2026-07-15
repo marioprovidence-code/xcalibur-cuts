@@ -1,0 +1,16 @@
+{
+  "name": "xcalibur-cuts-android",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Android app wrapper (Capacitor/TWA) for the Xcalibur Cuts website.",
+  "scripts": {
+    "cap:add": "cap add android",
+    "cap:sync": "cap sync",
+    "cap:build": "cap build android"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/android": "^6.0.0"
+  }
+}

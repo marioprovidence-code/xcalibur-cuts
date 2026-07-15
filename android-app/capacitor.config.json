@@ -1,0 +1,9 @@
+{
+  "appId": "com.xcaliburcuts.app",
+  "appName": "Xcalibur Cuts",
+  "webDir": "..",
+  "server": {
+    "url": "https://marioprovidence-code.github.io/xcalibur-cuts/",
+    "cleartext": false
+  }
+}
