@@ -102,6 +102,32 @@
     });
   }
 
+  // PWA: register service worker + install prompt
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("sw.js").catch(function () {});
+    });
+  }
+  let deferredPrompt = null;
+  const installBtn = document.getElementById("installAppBtn");
+  window.addEventListener("beforeinstallprompt", function (e) {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (installBtn) installBtn.hidden = false;
+  });
+  if (installBtn) {
+    installBtn.addEventListener("click", async function () {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+      installBtn.hidden = true;
+    });
+  }
+  window.addEventListener("appinstalled", function () {
+    if (installBtn) installBtn.hidden = true;
+  });
+
   // Gallery lightbox
   const lb = document.getElementById("lightbox");
   const lbContent = document.getElementById("lbContent");
