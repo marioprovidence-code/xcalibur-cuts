@@ -46,17 +46,23 @@
       form.reset();
     });
   }
-  // Enroll form (demo only — no backend)
+  // Enroll form -> posts to endpoint (Google Apps Script) which emails the owner
+  const ENROLL_ENDPOINT = ""; // paste your Google Apps Script web app URL here
   const enroll = document.getElementById("enrollForm");
   const enrollNote = document.getElementById("enrollNote");
   if (enroll) {
     enroll.addEventListener("submit", function (e) {
       e.preventDefault();
       const name = enroll.querySelector("#eName").value.trim();
+      const phone = enroll.querySelector("#ePhone").value.trim();
       const course = enroll.querySelector("#eCourse").value;
       if (!name || !course) {
         enrollNote.textContent = "Please complete all fields to enroll.";
         return;
+      }
+      const payload = new URLSearchParams({ name: name, phone: phone, course: course });
+      if (ENROLL_ENDPOINT) {
+        fetch(ENROLL_ENDPOINT, { method: "POST", body: payload }).catch(function () {});
       }
       enrollNote.textContent =
         "Thanks, " + name + "! Your interest in \"" + course + "\" is received. We'll contact you with next steps.";
